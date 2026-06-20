@@ -89,8 +89,8 @@ export function About() {
             <Reveal delay={0.3}>
               <blockquote className="relative mt-8 border-l-2 border-electric pl-6">
                 <p className="font-display text-lg font-medium italic text-foreground md:text-xl">
-                  &ldquo;Master it deeply, then move on. Depth compounds —
-                  shortcuts don&apos;t.&rdquo;
+                  &ldquo;Learn deeply, then move forward. Depth in understanding
+                  compounds over time.&rdquo;
                 </p>
                 <footer className="mt-2 text-sm text-muted">
                   — My learning philosophy
