@@ -63,8 +63,8 @@ export const ABOUT = {
   intro:
     "I'm a Computer Science undergraduate at the University of Westminster and an engineer with a strong interest in building practical software and learning through real-world experience.",
   story: [
-    "At Incubate Labs, I contribute to products used by real customers: AI-powered content generation engine, LLM judge agents, schema visualization, and the frontend applications that support them. Six months after joining as a Frontend Intern, I joined as a Frontend Intern and later progressed to an Associate Front-End Engineer role.",
-    "My learning philosophy is simple, master a concept deeply before moving on. I enjoy understanding how systems work beneath the surface. I'd rather understand why a system works than memorize how to use it. That mindset is what lets me move fast across new territory.",
+    "At Incubate Labs, I work on products used by real customers, including an AI-powered content engine and supporting frontend systems for LLM-driven workflows such as evaluation, schema handling, and content generation.",
+    "I prefer understanding systems deeply before moving on, focusing on how and why things work rather than surface-level usage. That mindset helps me adapt quickly across different technical areas.",
     "Beyond software development, I'm interested in sharing knowledge, mentoring others, and helping teams grow. In the long term, I hope to continue working across AI, product development, and engineering while contributing to meaningful products.",
   ],
   stats: [
