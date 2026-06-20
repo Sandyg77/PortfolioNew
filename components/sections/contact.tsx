@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { SITE } from "@/constants/data";
 import { SectionHeading } from "@/components/section-heading";
 import { GlassCard } from "@/components/ui/card";
@@ -37,18 +37,18 @@ const channels = [
 
 export function Contact() {
   return (
-    <section id="contact" className="relative overflow-hidden py-24 md:py-32">
+    <section id="contact" className="relative overflow-hidden py-14 md:py-20">
       {/* Background glow */}
       <div
         aria-hidden
-        className="absolute left-1/2 top-1/2 h-[480px] w-[640px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-electric/10 blur-[140px]"
+        className="absolute left-1/2 top-1/2 h-120 w-160 -translate-x-1/2 -translate-y-1/2 rounded-full bg-electric/10 blur-[140px]"
       />
 
       <div className="relative mx-auto max-w-6xl px-5 md:px-8">
         <SectionHeading
           eyebrow="Contact"
           title="Let's build something meaningful together"
-          description="Open to opportunities, collaborations, and conversations about AI, frontend engineering, and what's next."
+          description="Open to opportunities and collaborations in frontend engineering, AI systems, and building practical products."
         />
 
         <div className="mx-auto grid max-w-3xl gap-4 sm:grid-cols-2">
@@ -67,9 +67,6 @@ export function Contact() {
                     {channel.value}
                   </p>
                 </div>
-                {channel.href && (
-                  <ArrowUpRight className="ml-auto h-4 w-4 shrink-0 text-muted transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-electric" />
-                )}
               </GlassCard>
             );
             return (
@@ -83,7 +80,9 @@ export function Contact() {
                 {channel.href ? (
                   <a
                     href={channel.href}
-                    target={channel.href.startsWith("http") ? "_blank" : undefined}
+                    target={
+                      channel.href.startsWith("http") ? "_blank" : undefined
+                    }
                     rel="noopener noreferrer"
                     className="block h-full"
                   >
@@ -105,7 +104,11 @@ export function Contact() {
           className="mt-12 flex justify-center"
         >
           <Magnetic>
-            <ButtonLink href={`mailto:${SITE.email}`} variant="gradient" size="lg">
+            <ButtonLink
+              href={`mailto:${SITE.email}`}
+              variant="gradient"
+              size="lg"
+            >
               <Mail className="h-4 w-4" />
               Say Hello
             </ButtonLink>

@@ -14,9 +14,9 @@ function Portrait() {
       {/* Glow behind the frame */}
       <div
         aria-hidden
-        className="absolute -inset-4 rounded-[2rem] bg-electric/15 blur-3xl"
+        className="absolute -inset-4 rounded-4xl bg-electric/15 blur-3xl"
       />
-      <div className="glass relative aspect-[4/5] overflow-hidden rounded-3xl">
+      <div className="glass relative aspect-4/5 overflow-hidden rounded-3xl">
         <div aria-hidden className="absolute inset-0 grid-pattern opacity-40" />
         {SITE.portrait ? (
           <Image
@@ -46,7 +46,7 @@ function Portrait() {
         {/* Bottom gradient fade for a premium photo finish */}
         <div
           aria-hidden
-          className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-background/80 to-transparent"
+          className="absolute inset-x-0 bottom-0 h-24 bg-linear-to-t from-background/80 to-transparent"
         />
       </div>
       {/* Floating name chip */}
@@ -63,7 +63,7 @@ function Portrait() {
 
 export function About() {
   return (
-    <section id="about" className="relative py-24 md:py-32">
+    <section id="about" className="relative py-14 md:py-20">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
         <SectionHeading
           eyebrow="About"

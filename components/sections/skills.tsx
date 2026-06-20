@@ -31,12 +31,12 @@ const accent: Record<string, { icon: string; chip: string; ring: string }> = {
 
 export function Skills() {
   return (
-    <section id="skills" className="relative py-24 md:py-32">
+    <section id="skills" className="relative py-14 md:py-20">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
         <SectionHeading
           eyebrow="Technical Expertise"
-          title="An evolving skill ecosystem"
-          description="Not a static list — a living map of what I use in production today and where I'm pushing next."
+          title="Tools, Frameworks & Languages"
+          description="A snapshot of the tools and technologies I use regularly, along with those I'm learning and experimenting with."
         />
 
         <div className="grid gap-6 md:grid-cols-2">
@@ -60,7 +60,7 @@ export function Skills() {
                     <span
                       className={cn(
                         "flex h-12 w-12 items-center justify-center rounded-xl",
-                        colors.icon
+                        colors.icon,
                       )}
                     >
                       <Icon className="h-6 w-6" />
@@ -69,7 +69,9 @@ export function Skills() {
                       <h3 className="font-display text-lg font-bold text-foreground">
                         {category.title}
                       </h3>
-                      <p className="text-sm text-muted">{category.description}</p>
+                      <p className="text-sm text-muted">
+                        {category.description}
+                      </p>
                     </div>
                   </div>
                   <div className="flex flex-wrap gap-2.5">
@@ -83,7 +85,7 @@ export function Skills() {
                         className={cn(
                           "glass cursor-default rounded-full px-4 py-2 text-sm font-medium text-muted",
                           "transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg",
-                          colors.chip
+                          colors.chip,
                         )}
                       >
                         {skill}

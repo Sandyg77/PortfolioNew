@@ -5,13 +5,9 @@ import {
   Code2,
   Database,
   GraduationCap,
-  Megaphone,
-  Package,
-  Palette,
   PenTool,
-  Rocket,
   Sparkles,
-  Users,
+  Wand2,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
@@ -72,7 +68,7 @@ export const ABOUT = {
     "Beyond software development, I'm interested in sharing knowledge, mentoring others, and helping teams grow. In the long term, I hope to continue working across AI, product development, and engineering while contributing to meaningful products.",
   ],
   stats: [
-    { value: "5", suffix: "", label: "Projects contributed to" },
+    { value: "5+", suffix: "", label: "Projects contributed to" },
     { value: "1", suffix: "yr", label: "Building software" },
     { value: "Frontend", suffix: "", label: "Specialization" },
     { value: "∞", suffix: "", label: "Curiosity & learning" },
@@ -105,7 +101,7 @@ export const EXPERIENCE: Experience[] = [
       "Integrate LLMs into product workflows, including a Judge Agent system for automated quality evaluation",
       "Engineer multi-language content export pipelines for international markets",
       "Implement JSON-LD structured data driving search visibility at scale",
-      "Promoted from intern within six months; named Innovator of the Year 2026",
+      "Promoted from intern to Associate within six months and received Innovator of the Year 2026 recognition.",
     ],
     badges: [
       "LLM Orchestration",
@@ -125,7 +121,6 @@ export const EXPERIENCE: Experience[] = [
       "Built interactive knowledge graph visualizations with ReactFlow",
       "Implemented Schema.org structured data across production surfaces",
       "Shipped production UI used by real customers from week one",
-      "Earned a fast-track promotion to Associate Front-End Engineer",
     ],
     badges: ["Knowledge Graphs", "ReactFlow", "Schema.org", "React"],
   },
@@ -152,99 +147,131 @@ export interface Project {
   title: string;
   subtitle: string;
   description: string;
-  challenges: string;
-  impact: string;
+  challenges?: string;
+  challengeLabel?: string;
+  impact?: string;
+  impactLabel?: string;
   tech: string[];
-  gradient: string;
-  icon: LucideIcon;
+  gradient?: string;
+  icon?: LucideIcon;
   github?: string;
   live?: string;
-  placeholder?: boolean;
+  note?: string;
+  tier: "active" | "flagship" | "other";
+  image?: string;
 }
 
 export const PROJECTS: Project[] = [
+  // ── Active / In Progress ──
   {
-    title: "AI Engine",
-    subtitle: "Cloud of Goods",
+    title: "Cloud of Goods",
+    subtitle: "Rental Marketplace · Frontend",
     description:
-      "An AI-powered content generation engine for a national US rental marketplace — orchestrating LLMs to produce, evaluate, and publish structured content at scale.",
+      "A US-based rental marketplace platform connecting customers with rental providers across various product categories. I contributed as a Frontend Developer as part of the company's work on this product.",
     challenges:
-      "Designed LLM pipelines with a Judge Agent layer to keep generated content accurate and on-brand, plus JSON-LD structured data for search optimization.",
+      "Worked on frontend development for marketplace features, focusing on user-facing interfaces and integrating dynamic data from backend services into marketplace and listing workflows.",
+    challengeLabel: "Contribution",
     impact:
-      "Powers content across a production marketplace, turning a manual publishing bottleneck into an automated, quality-gated pipeline.",
-    tech: ["Next.js", "TypeScript", "Vercel AI SDK", "LLM Agents", "JSON-LD"],
+      "Building and maintaining UI components for marketplace flows, ensuring consistent rendering of dynamic content, and supporting structured data integration for listings where required.",
+    impactLabel: "Focus Areas",
+    tech: ["Laravel Blade", "HTML", "CSS / SASS", "JavaScript", "JSON-LD"],
     gradient: "from-emerald-500 via-emerald-700 to-slate-950",
     icon: BrainCircuit,
-    live: "https://www.cloudofgoods.com",
+    live: "https://www.cloudofgoods.com/",
+    image: "/cloudofgoods.png",
+    tier: "active",
   },
+  {
+    title: "AI Content Engine",
+    subtitle: "Internal Tool · LLMs and Agentic AI",
+    description:
+      "An internal LLM-powered content engine for generating and managing structured content across multiple languages and markets.",
+    challenges:
+      "Worked on frontend systems for content generation workflows, while also contributing to AI-driven pipelines for text and image generation outputs. Built interfaces supporting generation, review, and publishing flows used by internal content teams.",
+    challengeLabel: "Contribution",
+    impact:
+      "Developing UI for LLM-based text and image generation, integrating AI pipeline outputs into structured workflows, and supporting evaluation and quality-control processes for generated content.",
+    impactLabel: "Focus Areas",
+    tech: ["Next.js", "TypeScript", "LangGraph", "LLM Agents", "MongoDB"],
+    gradient: "from-violet-500 via-purple-700 to-slate-950",
+    icon: Wand2,
+    image: "/aicontentengine.png",
+    tier: "active",
+  },
+  // ── Flagship ──
   {
     title: "PredicTea",
-    subtitle: "Predictive Analytics Platform",
+    subtitle: "Predictive Analytics · Machine Learning",
     description:
-      "A machine-learning platform bringing predictive intelligence to Sri Lanka's tea industry — turning historical data into forecasts growers can act on.",
+      "A predictive analytics web application for tea auction pricing, built as a group project combining statistical forecasting with a user-facing dashboard. I contributed to the statistics page — building interactive line charts and filters to visualize historical and SARIMAX-based forecast data, and also supported product positioning and stakeholder outreach.",
     challenges:
-      "Bridging an ML prediction backend with an approachable frontend that non-technical users in a traditional industry can trust and understand.",
+      "Translating SARIMAX model outputs into clear, interactive visualizations that non-technical users in the tea industry can understand and use for decision-making.",
     impact:
-      "Live at predic-tea.com — demonstrating end-to-end delivery from model to deployed product.",
-    tech: ["Machine Learning", "React", "Python", "Data Visualization"],
+      "Delivered as a deployed product showcased at Cutting Edge 2025, bridging statistical forecasting outputs with an accessible user experience for real-world users.",
+    tech: [
+      "React.js",
+      "Chart.js",
+      "JavaScript",
+      "Python",
+      "SARIMAX",
+      "Data Visualization",
+    ],
     gradient: "from-green-400 via-emerald-600 to-emerald-900",
     icon: Sparkles,
-    live: "https://www.predic-tea.com",
+    github: "https://github.com/PredicTea/predic-tea",
+    live: "https://predic-tea.com/",
+    image: "/predictea.png",
+    tier: "flagship",
   },
-  {
-    title: "SafeHaven",
-    subtitle: "Community Safety Platform",
-    description:
-      "A full-stack application focused on safety and support — connecting people in need with resources and help when it matters most.",
-    challenges:
-      "Designing for users in stressful situations: clarity, speed, and trust had to come before visual flourish.",
-    impact:
-      "Open source on GitHub — a study in human-centered design under real constraints.",
-    tech: ["React", "Node.js", "Express", "MongoDB"],
-    gradient: "from-emerald-300 via-emerald-500 to-emerald-800",
-    icon: Users,
-    github: "https://github.com/Sandyg77/Safe_Haven",
-  },
-  {
-    title: "Ticket-Wave",
-    subtitle: "Real-Time Ticketing System",
-    description:
-      "A CLI-based event ticketing system simulating real-time ticket releases and purchases with a producer-consumer architecture.",
-    challenges:
-      "Managing concurrent vendors and customers safely — thread synchronization, race conditions, and graceful state handling.",
-    impact:
-      "A deep, practical exercise in concurrency and systems thinking beyond the browser.",
-    tech: ["Java", "OOP", "Multithreading", "CLI"],
-    gradient: "from-emerald-600 via-emerald-800 to-slate-950",
-    icon: Code2,
-    github: "https://github.com/Sandyg77/Ticket_Event_System_CLI",
-  },
+  // ── Other ──
   {
     title: "AutoVault",
     subtitle: "Vehicle Inventory Management",
     description:
-      "An inventory management system for vehicle dealerships — structured CRUD workflows, search, and reporting over a relational data model.",
-    challenges:
-      "Modeling real-world inventory rules into a clean schema and keeping the interface fast as the dataset grows.",
-    impact:
-      "Sharpened my fundamentals in data modeling and full-stack CRUD architecture.",
-    tech: ["Java", "MySQL", "OOP", "Data Modeling"],
-    gradient: "from-green-500 via-emerald-700 to-emerald-950",
-    icon: Database,
-    github: "https://github.com/Sandyg77",
+      "Vehicle inventory management system built as a full-stack web application for managing vehicle records and inventory workflows.",
+    tech: [
+      "Next.js",
+      "Prisma",
+      "Neon (PostgreSQL)",
+      "Tailwind CSS",
+      "TypeScript",
+    ],
+    github: "https://github.com/Sandyg77/AutoVault",
+    live: "https://auto-vault-eight.vercel.app/",
+    image: "/autovault.png",
+    tier: "other",
   },
   {
-    title: "What's Next?",
-    subtitle: "Currently in the lab",
+    title: "SafeHaven",
+    subtitle: "Property Platform",
     description:
-      "Multi-agent systems, LLM orchestration experiments, and products that don't exist yet. The best project is always the next one.",
-    challenges:
-      "Staying patient enough to master each layer before stacking the next.",
-    impact: "Watch this space.",
-    tech: ["Agentic AI", "Multi-Agent Systems", "???"],
-    gradient: "from-slate-500 via-slate-600 to-slate-800",
-    icon: Rocket,
-    placeholder: true,
+      "University project focused on a property platform for browsing and managing property listings with a user-focused interface.",
+    tech: ["React", "JavaScript", "CSS"],
+    github: "https://github.com/Sandyg77/Safe_Haven",
+    image: "/safehaven.png",
+    tier: "other",
+  },
+  {
+    title: "FilmCube",
+    subtitle: "Film Discovery App",
+    description:
+      "Movie discovery frontend application for browsing and exploring films.",
+    tech: ["JavaScript", "HTML", "CSS"],
+    github: "https://github.com/Sandyg77/MovieExplorer",
+    live: "https://filmcube.netlify.app/",
+    image: "/filmcube.png",
+    tier: "other",
+  },
+  {
+    title: "TicketWave",
+    subtitle: "Real-Time Ticketing System",
+    description:
+      "Real-time ticketing system built as a university project, focusing on concurrency and backend system design.",
+    note: "Core experience was gaining hands-on exposure to Java backend development and Spring Boot fundamentals through project implementation.",
+    tech: ["Java", "Multithreading", "CLI"],
+    github: "https://github.com/Sandyg77/Ticket_System_Backend",
+    image: "/ticketWave.png",
+    tier: "other",
   },
 ];
 
@@ -267,11 +294,15 @@ export const SKILLS: SkillCategory[] = [
     color: "electric",
     icon: Code2,
     skills: [
-      "React",
       "Next.js",
+      "React",
       "TypeScript",
+      "JavaScript",
+      "Laravel Blade",
+      "SCSS / SASS",
       "Tailwind CSS",
-      "Framer Motion",
+      "shadcn/ui",
+      "TanStack Query",
       "ReactFlow",
     ],
   },
@@ -281,12 +312,14 @@ export const SKILLS: SkillCategory[] = [
     color: "neon",
     icon: Bot,
     skills: [
-      "Vercel AI SDK",
       "LangChain",
-      "Prompt Engineering",
-      "LLM Integration",
-      "Agentic Workflows",
-      "Judge Agents",
+      "LangGraph",
+      "Multi-agent systems",
+      "Zod",
+      "Prompt engineering",
+      "LLMs",
+      "Generative AI",
+      "Image generation",
     ],
   },
   {
@@ -294,19 +327,27 @@ export const SKILLS: SkillCategory[] = [
     description: "The systems behind the screens",
     color: "emeraldine",
     icon: Database,
-    skills: ["Node.js", "Express", "MongoDB", "PostgreSQL", "MySQL"],
+    skills: [
+      "Next.js API routes",
+      "MongoDB",
+      "Auth.js / NextAuth v5",
+      "REST APIs",
+      "CMS integration",
+      "Cloudinary",
+    ],
   },
   {
-    title: "Emerging Technologies",
-    description: "Actively expanding territory",
+    title: "Emerging & Cross-cutting",
+    description: "Schema, SEO, AIEO & dev tooling",
     color: "amberglow",
     icon: Sparkles,
     skills: [
-      "Prisma",
-      "Neon",
-      "Knowledge Graphs",
-      "Schema Engineering",
-      "JSON-LD",
+      "Schema.org / JSON-LD",
+      "Knowledge graphs",
+      "SEO & AIEO",
+      "Google Rich Results",
+      "Git / GitLab",
+      "Postman",
     ],
   },
 ];
@@ -330,7 +371,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     org: "Incubate Labs",
     year: "2026",
     description:
-      "Recognized company-wide for driving AI innovation across production systems — from content engines to agentic quality pipelines.",
+      "Received the Innovator of the Year award in recognition of contributions to AI-driven projects and initiatives across the organization.",
     color: "amberglow",
     featured: true,
   },
@@ -339,7 +380,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     org: "Incubate Labs",
     year: "2025",
     description:
-      "Fast-tracked from Frontend Intern to Associate Front-End Engineer on the strength of production delivery and learning velocity.",
+      "Progressed from Frontend Intern to Associate Front-End Engineer within six months, taking on increasing responsibilities across development projects.",
     color: "electric",
   },
   {
@@ -347,7 +388,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     org: "John Keells Holdings",
     year: "2025",
     description:
-      "Pitched a technology solution to one of Sri Lanka's largest conglomerates — sharpening the bridge between engineering and business storytelling.",
+      "Presented a technology solution as part of the John Keells IT Pitchathon, gaining experience in communicating technical ideas to a business audience.",
     color: "emeraldine",
   },
   {
@@ -355,7 +396,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     org: "University of Westminster / IIT",
     year: "2025",
     description:
-      "Showcased innovative project work at Cutting Edge, presenting engineering built to production standards as an undergraduate.",
+      "Showcased the PredicTea project at Cutting Edge 2025 as part of a collaborative undergraduate team effort.",
     color: "neon",
   },
 ];
@@ -373,46 +414,25 @@ export interface BeyondItem {
 
 export const BEYOND: BeyondItem[] = [
   {
-    title: "Photography & Modelling",
+    title: "Visual & Creative Practice",
     description:
-      "Composition, light, and story — on both sides of the lens. From creative photography to a few photoshoots in front of the camera.",
+      "Creative photography, occasional modelling, and working with composition, light, and storytelling from both sides of the lens.",
     icon: Camera,
     color: "electric",
   },
   {
-    title: "Product Packaging Design",
+    title: "Design & Freelance Work",
     description:
-      "Designing physical packaging taught me that constraints are the most honest creative brief.",
-    icon: Package,
-    color: "amberglow",
-  },
-  {
-    title: "Branding",
-    description:
-      "Identity systems, voice, and visual language — building brands that feel inevitable, not assembled.",
-    icon: Palette,
-    color: "neon",
-  },
-  {
-    title: "Social Media Marketing",
-    description:
-      "Growing audiences and crafting campaigns — understanding attention is a superpower for product work.",
-    icon: Megaphone,
-    color: "emeraldine",
-  },
-  {
-    title: "Freelance Work",
-    description:
-      "Client projects across design and development — scoping, delivering, and owning outcomes end to end.",
+      "Freelance projects across product packaging, branding, and social media content, working with tools like Affinity and Canva to deliver practical design solutions under real constraints.",
     icon: PenTool,
-    color: "electric",
+    color: "amberglow",
   },
   {
-    title: "Teaching & Mentoring",
+    title: "Knowledge Sharing",
     description:
-      "Explaining things until they're simple is how I learn. Mentoring is the career thread I never want to drop.",
+      "I enjoy teaching and sharing knowledge as a personal interest, since breaking down concepts simply helps others and also strengthens my own understanding.",
     icon: GraduationCap,
-    color: "amberglow",
+    color: "neon",
   },
 ];
 
@@ -430,19 +450,25 @@ export interface LearningStage {
 export const LEARNING: LearningStage[] = [
   {
     stage: "Now",
-    label: "Deep in it",
+    label: "Deep in active work",
     color: "electric",
     items: [
-      { name: "Agentic AI", note: "Designing autonomous, tool-using systems" },
       {
-        name: "LLM Orchestration",
-        note: "Chaining, routing, and evaluating model calls",
+        name: "Next.js",
+        note: "Production frontend with modern React architecture.",
       },
       {
         name: "Advanced Prompt Engineering",
-        note: "From craft to measurable discipline",
+        note: "Structured techniques for reliable LLM outputs.",
       },
-      { name: "PostgreSQL", note: "Going deep on the relational layer" },
+      {
+        name: "Laravel Blade",
+        note: "Working with server-rendered UI templates and frontend view layers in Laravel.",
+      },
+      {
+        name: "Agentic Orchestration & LLM Systems",
+        note: "Agent-based workflows and generative AI systems.",
+      },
     ],
   },
   {
@@ -451,40 +477,39 @@ export const LEARNING: LearningStage[] = [
     color: "emeraldine",
     items: [
       {
-        name: "Multi-Agent Systems",
-        note: "Coordination, communication, emergence",
+        name: "Vector Databases",
+        note: "Embeddings, similarity search, and retrieval.",
       },
       {
-        name: "Prisma + Neon",
-        note: "Modern typed data layer, serverless Postgres",
+        name: "PostgreSQL",
+        note: "Relational data modeling and query performance.",
       },
-      { name: "Laravel + Blade", note: "Widening the backend toolbox" },
       {
-        name: "SASS",
-        note: "Mastering the styling layer beneath the frameworks",
+        name: "Spring Boot (Java)",
+        note: "Backend engineering in enterprise Java.",
+      },
+      {
+        name: "RAG (Retrieval-Augmented Generation)",
+        note: "Combining retrieval systems with generative models.",
       },
     ],
   },
   {
     stage: "Horizon",
-    label: "The long game",
+    label: "Long-term exploration",
     color: "neon",
     items: [
       {
-        name: "Neural Networks",
-        note: "From using models to understanding them",
+        name: "Neural Networks & Deep Learning",
+        note: "How models learn under the hood.",
       },
       {
-        name: "Software Architecture",
-        note: "Systems that survive their creators",
+        name: "Agentic AI Systems",
+        note: "Autonomous, multi-step decision-making agents.",
       },
       {
-        name: "Teaching & Academia",
-        note: "Postgraduate study and giving knowledge back",
-      },
-      {
-        name: "Technical Leadership",
-        note: "Multiplying impact through people",
+        name: "AI Workflows & System Design",
+        note: "Scalable, reliable AI-powered architectures.",
       },
     ],
   },

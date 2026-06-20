@@ -16,12 +16,12 @@ const accent: Record<string, string> = {
 
 export function Achievements() {
   return (
-    <section id="achievements" className="relative py-24 md:py-32">
+    <section id="achievements" className="relative py-14 md:py-20">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
         <SectionHeading
           eyebrow="Achievements"
-          title="Milestones along the way"
-          description="Recognition earned by shipping, pitching, and growing faster than the timeline expected."
+          title="Moments of Progress"
+          description="Awards, accomplishments, and meaningful experiences from my academic and professional journey."
         />
 
         <div className="grid gap-6 sm:grid-cols-2">
@@ -36,20 +36,20 @@ export function Achievements() {
                 delay: (i % 2) * 0.12,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className={achievement.featured ? "sm:col-span-2" : undefined}
+              className={undefined}
             >
               <GlassCard
                 className={cn(
                   "h-full p-7",
                   achievement.featured &&
-                    "border-amberglow/30 bg-gradient-to-br from-amberglow/5 to-transparent"
+                    "border-amberglow/30 bg-linear-to-br from-amberglow/5 to-transparent",
                 )}
               >
                 <div className="flex flex-col gap-5 sm:flex-row sm:items-start">
                   <span
                     className={cn(
                       "flex h-13 w-13 shrink-0 items-center justify-center rounded-xl p-3",
-                      accent[achievement.color]
+                      accent[achievement.color],
                     )}
                   >
                     {achievement.featured ? (
@@ -63,7 +63,7 @@ export function Achievements() {
                       <h3
                         className={cn(
                           "font-display font-bold text-foreground",
-                          achievement.featured ? "text-2xl" : "text-lg"
+                          achievement.featured ? "text-2xl" : "text-lg",
                         )}
                       >
                         {achievement.title}

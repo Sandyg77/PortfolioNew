@@ -10,20 +10,32 @@ import { cn } from "@/lib/utils";
 const stageIcon = [Flame, Compass, Telescope];
 
 const accent: Record<string, { text: string; bg: string; line: string }> = {
-  electric: { text: "text-electric", bg: "bg-electric/10", line: "from-electric" },
-  emeraldine: { text: "text-emeraldine", bg: "bg-emeraldine/10", line: "from-emeraldine" },
-  amberglow: { text: "text-amberglow", bg: "bg-amberglow/10", line: "from-amberglow" },
+  electric: {
+    text: "text-electric",
+    bg: "bg-electric/10",
+    line: "from-electric",
+  },
+  emeraldine: {
+    text: "text-emeraldine",
+    bg: "bg-emeraldine/10",
+    line: "from-emeraldine",
+  },
+  amberglow: {
+    text: "text-amberglow",
+    bg: "bg-amberglow/10",
+    line: "from-amberglow",
+  },
   neon: { text: "text-neon", bg: "bg-neon/10", line: "from-neon" },
 };
 
 export function Learning() {
   return (
-    <section id="learning" className="relative py-24 md:py-32">
+    <section id="learning" className="relative py-14 md:py-20">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
         <SectionHeading
           eyebrow="Learning Journey"
           title="The roadmap never ends"
-          description="What I'm mastering right now, what's queued next, and where the long game leads."
+          description="Areas of focus today, what’s next in line, and the long-term direction."
         />
 
         <div className="grid gap-6 lg:grid-cols-3">
@@ -48,8 +60,8 @@ export function Learning() {
                   <div
                     aria-hidden
                     className={cn(
-                      "absolute -right-6 top-10 hidden h-px w-6 bg-gradient-to-r to-transparent lg:block",
-                      colors.line
+                      "absolute -right-6 top-10 hidden h-px w-6 bg-linear-to-r to-transparent lg:block",
+                      colors.line,
                     )}
                   />
                 )}
@@ -59,7 +71,7 @@ export function Learning() {
                       className={cn(
                         "flex h-10 w-10 items-center justify-center rounded-xl",
                         colors.bg,
-                        colors.text
+                        colors.text,
                       )}
                     >
                       <Icon className="h-5 w-5" />
@@ -68,7 +80,12 @@ export function Learning() {
                       <h3 className="font-display text-lg font-bold text-foreground">
                         {stage.stage}
                       </h3>
-                      <p className={cn("text-xs font-semibold uppercase tracking-wider", colors.text)}>
+                      <p
+                        className={cn(
+                          "text-xs font-semibold uppercase tracking-wider",
+                          colors.text,
+                        )}
+                      >
                         {stage.label}
                       </p>
                     </div>

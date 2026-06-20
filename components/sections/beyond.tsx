@@ -15,12 +15,12 @@ const accent: Record<string, string> = {
 
 export function Beyond() {
   return (
-    <section id="beyond" className="relative py-24 md:py-32">
+    <section id="beyond" className="relative py-14 md:py-20">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
         <SectionHeading
           eyebrow="Beyond Engineering"
           title="The other half of the brain"
-          description="Creativity isn't a side project — it's the same muscle that makes the engineering better."
+          description="Creativity and engineering work best when they reinforce each other."
         />
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -42,7 +42,7 @@ export function Beyond() {
                   <span
                     className={cn(
                       "mb-4 flex h-11 w-11 items-center justify-center rounded-xl transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6",
-                      accent[interest.color]
+                      accent[interest.color],
                     )}
                   >
                     <Icon className="h-5 w-5" />

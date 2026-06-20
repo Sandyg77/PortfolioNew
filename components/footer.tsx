@@ -30,7 +30,7 @@ export function Footer() {
               aria-label={label}
               className="glass flex h-10 w-10 items-center justify-center rounded-full text-muted transition-all duration-300 hover:-translate-y-0.5 hover:text-electric"
             >
-              <Icon className="h-[18px] w-[18px]" />
+              <Icon className="w-4.5" />
             </a>
           ))}
         </div>

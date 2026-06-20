@@ -18,7 +18,7 @@ const grotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: `${SITE.name} — ${SITE.role}`,
+  title: `${SITE.shortName} Sathdahara · Portfolio`,
   description: SITE.tagline,
   keywords: [
     "Sandumi Sathdahara Godage",
@@ -33,14 +33,14 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: SITE.name }],
   openGraph: {
-    title: `${SITE.name} — ${SITE.role}`,
+    title: `${SITE.shortName} Sathdahara · Portfolio`,
     description: SITE.tagline,
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE.name} — ${SITE.role}`,
+    title: `${SITE.shortName} Sathdahara · Portfolio`,
     description: SITE.tagline,
   },
   robots: { index: true, follow: true },
@@ -52,7 +52,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} ${grotesk.variable} font-sans`}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem={false}
+        >
           <Background />
           {children}
         </ThemeProvider>

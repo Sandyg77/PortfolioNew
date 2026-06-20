@@ -16,7 +16,7 @@ const dotColor: Record<string, string> = {
 
 export function Experience() {
   return (
-    <section id="experience" className="relative py-24 md:py-32">
+    <section id="experience" className="relative py-14 md:py-20">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
         <SectionHeading
           eyebrow="Experience"
@@ -28,7 +28,7 @@ export function Experience() {
           {/* Timeline line */}
           <div
             aria-hidden
-            className="absolute bottom-4 left-[11px] top-2 w-px bg-gradient-to-b from-electric via-emeraldine to-transparent md:left-1/2"
+            className="absolute bottom-4 left-2.75 top-2 w-px bg-linear-to-b from-electric via-emeraldine to-transparent md:left-1/2"
           />
 
           <div className="space-y-12">
@@ -50,7 +50,7 @@ export function Experience() {
                     aria-hidden
                     className={`absolute left-1.5 top-2 h-3 w-3 rounded-full shadow-[0_0_12px_3px] md:top-3 ${
                       dotColor[job.color]
-                    } ${isLeft ? "md:left-auto md:-right-[2.45rem]" : "md:-left-[2.45rem]"}`}
+                    } ${isLeft ? "md:left-auto md:right-[-2.45rem]" : "md:right-[-2.45rem]"}`}
                   />
 
                   <GlassCard className="p-6 md:p-7">
