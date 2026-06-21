@@ -1,7 +1,14 @@
 "use client";
 
 import { motion, type Variants } from "framer-motion";
-import { ArrowDown, Download, Github, Linkedin, Mail, Sparkles } from "lucide-react";
+import {
+  ArrowDown,
+  Download,
+  Github,
+  Linkedin,
+  Mail,
+  Sparkles,
+} from "lucide-react";
 import { HERO_KEYWORDS, SITE } from "@/constants/data";
 import { ButtonLink } from "@/components/ui/button";
 import { Magnetic } from "@/components/magnetic";
@@ -42,7 +49,10 @@ export function Hero() {
       />
 
       {/* Floating accents */}
-      <div aria-hidden className="pointer-events-none absolute inset-0 hidden md:block">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 hidden md:block"
+      >
         <div className="animate-float-slow absolute left-[12%] top-[24%] h-3 w-3 rounded-full bg-electric/60" />
         <div
           className="animate-float-slow absolute right-[16%] top-[32%] h-2 w-2 rounded-full bg-neon/60"
@@ -79,15 +89,15 @@ export function Hero() {
           className="font-display text-4xl font-bold leading-[1.05] tracking-tight text-foreground sm:text-6xl md:text-7xl"
         >
           Hi, I&apos;m <span className="shimmer-text">Sandumi</span>.
-          <br />
-          I craft intelligent solutions.
+          <br />I craft intelligent solutions.
         </motion.h1>
 
         <motion.p
           variants={item}
           className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted md:text-lg"
         >
-          Frontend engineer building AI-powered products, combining modern web development with LLMs, agent workflows, and user-centered design.
+          Frontend engineer building AI-powered products, combining modern web
+          development with LLMs, agent workflows, and user-centered design.
         </motion.p>
         <motion.div
           variants={item}
@@ -100,7 +110,12 @@ export function Hero() {
             </ButtonLink>
           </Magnetic>
           <Magnetic>
-            <ButtonLink href={SITE.resumeUrl} variant="outline" size="lg" download>
+            <ButtonLink
+              href={SITE.resumeUrl}
+              variant="outline"
+              size="lg"
+              download
+            >
               <Download className="h-4 w-4" />
               Resume
             </ButtonLink>

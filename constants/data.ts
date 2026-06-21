@@ -17,8 +17,8 @@ import type { LucideIcon } from "lucide-react";
 
 export const SITE = {
   name: "Sandumi Sathdahara Godage",
-  shortName: "Sandumi",
-  role: "Associate Front-End Engineer",
+  shortName: "",
+  role: "",
   headline: "Hi, I'm Sandumi. I craft intelligent solutions.",
   tagline:
     "Frontend engineer shipping production AI systems — from LLM orchestration and judge agents to knowledge graphs and human-centered interfaces.",

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ImagePlus, Sparkles } from "lucide-react";
+import { ImagePlus } from "lucide-react";
 import { ABOUT, SITE } from "@/constants/data";
 import { SectionHeading } from "@/components/section-heading";
 import { Reveal } from "@/components/reveal";
@@ -48,14 +48,6 @@ function Portrait() {
           aria-hidden
           className="absolute inset-x-0 bottom-0 h-24 bg-linear-to-t from-background/80 to-transparent"
         />
-      </div>
-      {/* Floating name chip */}
-      <div className="glass absolute -bottom-4 left-1/2 flex -translate-x-1/2 items-center gap-2 whitespace-nowrap rounded-full px-4 py-2 shadow-lg">
-        <Sparkles className="h-4 w-4 text-electric" />
-        <span className="text-sm font-semibold text-foreground">
-          {SITE.shortName}
-        </span>
-        <span className="text-xs text-muted">· {SITE.role}</span>
       </div>
     </Reveal>
   );
