@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { NAV_LINKS, SITE } from "@/constants/data";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { PaletteToggle } from "@/components/palette-toggle";
 import { ButtonLink } from "@/components/ui/button";
 import { useScrollSpy } from "@/hooks/use-scroll-spy";
 import { cn } from "@/lib/utils";
@@ -78,13 +79,14 @@ export function Navbar() {
           })}
         </ul>
 
-        <div className="flex items-center gap-3">
+        <div className="flex shrink-0 items-center gap-3">
+          <PaletteToggle className="hidden lg:flex" />
           <ThemeToggle />
           <ButtonLink
             href="#contact"
             variant="gradient"
             size="sm"
-            className="hidden lg:inline-flex"
+            className="hidden whitespace-nowrap lg:inline-flex"
           >
             Let&apos;s Talk
           </ButtonLink>
@@ -128,6 +130,10 @@ export function Navbar() {
                 </motion.li>
               ))}
             </ul>
+            <div className="mt-3 flex items-center justify-between border-t border-border pt-3">
+              <span className="text-sm text-muted">Palette</span>
+              <PaletteToggle />
+            </div>
             <ButtonLink
               href="#contact"
               variant="gradient"

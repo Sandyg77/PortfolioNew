@@ -149,7 +149,7 @@ function NeuralCanvas() {
     const observer = new MutationObserver(readAccent);
     observer.observe(document.documentElement, {
       attributes: true,
-      attributeFilter: ["class"],
+      attributeFilter: ["class", "data-palette"],
     });
 
     window.addEventListener("resize", resize);

@@ -18,7 +18,7 @@ const buttonVariants = cva(
         ].join(" "),
         gradient: [
           "text-white shadow-lg shadow-electric/25",
-          "bg-gradient-to-r from-emerald-700 via-emerald-500 to-green-400",
+          "bg-gradient-to-r from-emeraldine via-electric to-amberglow",
           "bg-[length:150%_auto] hover:bg-right hover:shadow-xl hover:shadow-electric/30 hover:-translate-y-0.5",
         ].join(" "),
         outline: [

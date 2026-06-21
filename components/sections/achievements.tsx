@@ -24,7 +24,7 @@ export function Achievements() {
           description="Awards, accomplishments, and meaningful experiences from my academic and professional journey."
         />
 
-        <div className="grid gap-6 sm:grid-cols-2">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {ACHIEVEMENTS.map((achievement, i) => (
             <motion.div
               key={achievement.title}
@@ -45,7 +45,7 @@ export function Achievements() {
                     "border-amberglow/30 bg-linear-to-br from-amberglow/5 to-transparent",
                 )}
               >
-                <div className="flex flex-col gap-5 sm:flex-row sm:items-start">
+                <div className="flex flex-col gap-5">
                   <span
                     className={cn(
                       "flex h-13 w-13 shrink-0 items-center justify-center rounded-xl p-3",

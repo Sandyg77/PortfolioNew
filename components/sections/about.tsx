@@ -111,7 +111,7 @@ export function About() {
               transition={{ delay: i * 0.1, duration: 0.5 }}
             >
               <GlassCard className="h-full p-6">
-                <p className="font-display text-3xl font-bold text-foreground md:text-4xl">
+                <p className={`font-display font-bold text-foreground ${stat.value.length > 4 ? "text-xl md:text-2xl" : "text-3xl md:text-4xl"}`}>
                   {stat.value}
                   <span className="gradient-text">{stat.suffix}</span>
                 </p>

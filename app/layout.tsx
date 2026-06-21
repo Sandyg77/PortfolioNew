@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
+import { PaletteProvider } from "@/contexts/palette-context";
 import { Background } from "@/components/background";
 import { SITE } from "@/constants/data";
 import "./globals.css";
@@ -57,8 +58,10 @@ export default function RootLayout({
           defaultTheme="dark"
           enableSystem={false}
         >
-          <Background />
-          {children}
+          <PaletteProvider>
+            <Background />
+            {children}
+          </PaletteProvider>
         </ThemeProvider>
       </body>
     </html>

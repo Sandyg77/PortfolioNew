@@ -164,6 +164,30 @@ export interface Project {
 export const PROJECTS: Project[] = [
   // ── Active / In Progress ──
   {
+    title: "AI Content Engine",
+    subtitle: "Internal Tool · SEO/AIEO",
+    description:
+      "An internal LLM-powered content engine for generating and managing structured content across multiple languages and markets.",
+    challenges:
+      "Contributed to content generation and agentic content review workflows combining LLMs, retrieval pipelines, and human-in-the-loop validation. Worked on systems that evaluate, regenerate, and refine text and image content using grounded data sources, helping reduce manual review effort while maintaining content quality.",
+    challengeLabel: "Contribution",
+    impact:
+      "Agentic AI workflows, retrieval-backed content validation, human-in-the-loop review systems, multimodal content generation, and structured publishing pipelines for large-scale content operations.",
+    impactLabel: "Focus Areas",
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "LangGraph",
+      "Agentic AI",
+      "LLMs",
+      "MongoDB",
+    ],
+    gradient: "from-violet-500 via-purple-700 to-slate-950",
+    icon: Wand2,
+    image: "/aicontentengine.png",
+    tier: "active",
+  },
+  {
     title: "Cloud of Goods",
     subtitle: "Rental Marketplace · Frontend",
     description:
@@ -179,23 +203,6 @@ export const PROJECTS: Project[] = [
     icon: BrainCircuit,
     live: "https://www.cloudofgoods.com/",
     image: "/cloudofgoods.png",
-    tier: "active",
-  },
-  {
-    title: "AI Content Engine",
-    subtitle: "Internal Tool · LLMs and Agentic AI",
-    description:
-      "An internal LLM-powered content engine for generating and managing structured content across multiple languages and markets.",
-    challenges:
-      "Worked on frontend systems for content generation workflows, while also contributing to AI-driven pipelines for text and image generation outputs. Built interfaces supporting generation, review, and publishing flows used by internal content teams.",
-    challengeLabel: "Contribution",
-    impact:
-      "Developing UI for LLM-based text and image generation, integrating AI pipeline outputs into structured workflows, and supporting evaluation and quality-control processes for generated content.",
-    impactLabel: "Focus Areas",
-    tech: ["Next.js", "TypeScript", "LangGraph", "LLM Agents", "MongoDB"],
-    gradient: "from-violet-500 via-purple-700 to-slate-950",
-    icon: Wand2,
-    image: "/aicontentengine.png",
     tier: "active",
   },
   // ── Flagship ──
@@ -376,12 +383,12 @@ export const ACHIEVEMENTS: Achievement[] = [
     featured: true,
   },
   {
-    title: "Intern → Associate in 6 Months",
-    org: "Incubate Labs",
+    title: "Cutting Edge 2025",
+    org: "University of Westminster / IIT",
     year: "2025",
     description:
-      "Progressed from Frontend Intern to Associate Front-End Engineer within six months, taking on increasing responsibilities across development projects.",
-    color: "electric",
+      "Showcased the PredicTea project at Cutting Edge 2025 as part of a collaborative undergraduate team effort.",
+    color: "neon",
   },
   {
     title: "John Keells IT Pitchathon",
@@ -390,14 +397,6 @@ export const ACHIEVEMENTS: Achievement[] = [
     description:
       "Presented a technology solution as part of the John Keells IT Pitchathon, gaining experience in communicating technical ideas to a business audience.",
     color: "emeraldine",
-  },
-  {
-    title: "Cutting Edge 2025",
-    org: "University of Westminster / IIT",
-    year: "2025",
-    description:
-      "Showcased the PredicTea project at Cutting Edge 2025 as part of a collaborative undergraduate team effort.",
-    color: "neon",
   },
 ];
 
