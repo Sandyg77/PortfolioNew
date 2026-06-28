@@ -147,6 +147,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 5.5rem;
+  overflow-x: hidden; /* on html, not body — body overflow-x:hidden breaks backdrop-filter on fixed elements in Safari */
 }
 
 body {
@@ -154,7 +155,6 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
   transition: background-color 0.5s ease, color 0.5s ease;
 }
 
