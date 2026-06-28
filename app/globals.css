@@ -182,7 +182,6 @@ body {
 @utility glass {
   background: var(--card);
   backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--border);
 }
 
