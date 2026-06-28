@@ -146,7 +146,7 @@ export function Navbar() {
             </ul>
             <div className="mt-3 flex items-center justify-between border-t border-border pt-3">
               <span className="text-sm text-muted">Palette</span>
-              <PaletteToggle />
+              <PaletteToggle inline />
             </div>
             <ButtonLink
               href="#contact"

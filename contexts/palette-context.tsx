@@ -2,9 +2,9 @@
 
 import { createContext, useContext, useEffect, useState } from "react";
 
-export type Palette = "emerald" | "violet" | "rose" | "sky" | "amber";
+export type Palette = "emerald" | "violet" | "rose" | "sky" | "amber" | "teal" | "orange" | "fuchsia" | "indigo";
 
-const VALID: Palette[] = ["emerald", "violet", "rose", "sky", "amber"];
+const VALID: Palette[] = ["emerald", "violet", "rose", "sky", "amber", "teal", "orange", "fuchsia", "indigo"];
 const STORAGE_KEY = "portfolio-palette";
 
 interface PaletteContextValue {

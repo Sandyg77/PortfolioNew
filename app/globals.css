@@ -140,6 +140,102 @@
   --neon: #fb923c;
 }
 
+/* ─────────────────────────────────────────
+   Palette: Teal
+   ───────────────────────────────────────── */
+[data-palette="teal"] {
+  --background: #f0fdfa;
+  --subtle: #ccfbf1;
+  --muted: #2d6b65;
+  --border: rgba(8, 18, 16, 0.1);
+  --electric: #0d9488;
+  --emeraldine: #0f766e;
+  --amberglow: #14b8a6;
+  --neon: #0891b2;
+}
+[data-palette="teal"].dark {
+  --background: #020d0c;
+  --subtle: #0a1c1a;
+  --muted: #93a8a6;
+  --border: rgba(236, 248, 246, 0.09);
+  --electric: #2dd4bf;
+  --emeraldine: #14b8a6;
+  --amberglow: #5eead4;
+  --neon: #06b6d4;
+}
+
+/* ─────────────────────────────────────────
+   Palette: Orange
+   ───────────────────────────────────────── */
+[data-palette="orange"] {
+  --background: #fff7ed;
+  --subtle: #ffedd5;
+  --muted: #7a5020;
+  --border: rgba(20, 12, 8, 0.1);
+  --electric: #ea580c;
+  --emeraldine: #c2410c;
+  --amberglow: #f97316;
+  --neon: #dc2626;
+}
+[data-palette="orange"].dark {
+  --background: #0d0702;
+  --subtle: #1e0e04;
+  --muted: #a89888;
+  --border: rgba(248, 242, 236, 0.09);
+  --electric: #fb923c;
+  --emeraldine: #f97316;
+  --amberglow: #fdba74;
+  --neon: #f87171;
+}
+
+/* ─────────────────────────────────────────
+   Palette: Fuchsia
+   ───────────────────────────────────────── */
+[data-palette="fuchsia"] {
+  --background: #fdf4ff;
+  --subtle: #fae8ff;
+  --muted: #7a3f80;
+  --border: rgba(20, 8, 22, 0.1);
+  --electric: #c026d3;
+  --emeraldine: #a21caf;
+  --amberglow: #d946ef;
+  --neon: #9333ea;
+}
+[data-palette="fuchsia"].dark {
+  --background: #0c060e;
+  --subtle: #1a0b1e;
+  --muted: #a893a8;
+  --border: rgba(248, 236, 250, 0.09);
+  --electric: #e879f9;
+  --emeraldine: #d946ef;
+  --amberglow: #f0abfc;
+  --neon: #c084fc;
+}
+
+/* ─────────────────────────────────────────
+   Palette: Indigo
+   ───────────────────────────────────────── */
+[data-palette="indigo"] {
+  --background: #eef2ff;
+  --subtle: #e0e7ff;
+  --muted: #40458a;
+  --border: rgba(8, 10, 20, 0.1);
+  --electric: #4338ca;
+  --emeraldine: #3730a3;
+  --amberglow: #4f46e5;
+  --neon: #2563eb;
+}
+[data-palette="indigo"].dark {
+  --background: #06060f;
+  --subtle: #0d0d24;
+  --muted: #9093a8;
+  --border: rgba(236, 237, 248, 0.09);
+  --electric: #818cf8;
+  --emeraldine: #6366f1;
+  --amberglow: #a5b4fc;
+  --neon: #60a5fa;
+}
+
 * {
   border-color: var(--border);
 }
