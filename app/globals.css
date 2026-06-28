@@ -147,7 +147,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 5.5rem;
-  overflow-x: hidden; /* on html, not body — body overflow-x:hidden breaks backdrop-filter on fixed elements in Safari */
+  overflow-x: clip; /* clip (not hidden) — hidden turns html into a scroll container, breaking backdrop-filter on fixed elements in Chrome; clip clips without creating a scroll container */
 }
 
 body {
